@@ -1,0 +1,36 @@
+
+<body>
+  <section>
+  <h1 style="text-align: center"> Displaying all your coupons</h1>
+ 
+    <table style="margin-left: 10px" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Start date</th>
+          <th>End date</th>
+          <th>Amount</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Image</th>
+        </tr>
+        <tr *ngFor= "let c of _coupons">
+          <td>{{c.id}}</td>
+          <td>{{c.title}}</td>
+          <td>{{c.startDate | date : "dd/MM/yyyy"}}</td>
+          <td>{{c.endDate | date : "dd/MM/yyyy"}}</td>
+          <td>{{c.amount}}</td>
+          <td>{{c.type}}</td>
+          <td>{{c.message}}</td>
+          <td>{{c.price | currency : 'ILS'}}</td>
+          <td><img src ="{{c.image}}"></td>
+        </tr>
+      </thead>
+    </table>
+ 
+
+</section>
+
+</body>

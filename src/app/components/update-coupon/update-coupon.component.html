@@ -1,0 +1,36 @@
+<form style="margin-left: 20px" class="form-inline">
+  
+     <div class ="form-group">
+          <label for="title">title</label>
+          <input required 
+          class="form-control" placeholder="title"
+          [(ngModel)] = "coupon.title"
+          type="text" id="title"   name="title" />
+  </div>
+  
+  <div class="form-group">
+          <label for="End Date">End Date</label>
+          <input class="form-control" placeholder="End Date"
+          [(ngModel)] = "coupon.endDate"
+          type="date" id="endDate"   name="endDate" />
+      </div>
+
+   
+      
+      <div class="form-group">
+              <label for="price">price</label>
+              <input class="form-control" placeholder="price"
+              [(ngModel)] = "coupon.price"
+              type="number" id="price"   name="price" />
+          </div>
+
+
+
+<br>
+<br>
+  
+  <div class="form-group">   
+<button (click)="updateCoupon()" class="btn btn-Primary">Update Coupon <span class="glyphicon glyphicon-refresh"></span></button>
+
+
+</div>

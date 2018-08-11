@@ -1,0 +1,38 @@
+<!-- <form style="margin-left: 20px" class="form-inline">
+    <div class="form-group">
+        <label for="title">title</label>
+        <input class="for-control" placeholder="enter title to remove coupon"
+        type="String" name="couponTitle" [(ngModel)]= "title"/>
+
+    </div>
+    
+   
+    <br>
+    <pre>
+        {{coupon | json}}
+    </pre>
+    <br><br>
+    <br>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10"> 
+        <button (click)="removeCoupon()" type="remove" 
+        class="btn btn-danger">Remove Coupon <span class="glyphicon glyphicon-minus-sign"></span></button>
+        </div>
+    </div>
+</form> -->
+
+<form class="form-horizontal" style="margin-left: 20px">
+        <div class="form-group">
+            <label for="CouponID" class="control-label col-sm-2">Coupon title</label>
+            <div class="col-sm-6">
+                <input class="form-control" placeholder="Insert The Coupon title"
+                        type="text" name="CouponTitle" [(ngModel)] = "coupontoremove" />
+            </div>
+        </div>
+      <hr>
+      <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+               <button (click)= "removeCoupon()" type="remove" class="btn btn-primary btn-lg">Remove <span class="glyphicon glyphicon-floppy-remove"></span></button>
+                </div>
+          </div>
+      </form>

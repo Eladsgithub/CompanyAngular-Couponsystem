@@ -1,0 +1,92 @@
+<form style="margin-left: 20px" class="form-inline">
+        <div class="form-group">
+            <label for="title">title</label>
+            <input required
+           name="title"  
+           id="title"
+           type="text"
+           class="form-control" 
+           placeholder="title" 
+           [(ngModel)]="coupon.title"/>
+        </div>
+
+
+        <div class="form-group">
+            <label for="Start Date">Start Date</label>
+            <input class="form-control" placeholder="Start Date"
+            [(ngModel)] = "coupon.startDate"
+            type="date" id="startDate"   name="startDate" />
+        </div>
+        <div class="form-group">
+                <label for="End Date">End Date</label>
+                <input class="form-control" placeholder="End Date"
+                [(ngModel)] = "coupon.endDate"
+                type="date" id="endDate"   name="endDate" />
+            </div>
+
+            <div class="form-group">
+                    <label for="amount">amount</label>
+                    <input class="form-control" placeholder="how many to add"
+                    [(ngModel)] = "coupon.amount"
+                    type="number" id="amount"   name="amount" />
+                </div>
+                <hr>
+
+            <div class="form-group">
+                    <label for="type">type</label>
+                    <select required
+                ngModel
+                name="couponType"
+                class="form-control" 
+                placeholder="Coupon Type" 
+                [(ngModel)]="coupon.type"                  
+                id="couponType">
+                  <option value=""></option>
+                  <option value="VACATION">VACATION</option>
+                  <option value="ELECTRICAPPLIANCE">ELECTRIC APPLIANCE</option>
+                  <option value="FOOD">FOOD</option>
+                  <option value="LEISURE">LEISURE</option>
+                  
+        </select>
+                
+         <div class="form-group">
+                <label for="message">message</label>
+                <input class="form-control" placeholder="message"
+                [(ngModel)] = "coupon.message"
+                type="text" id="message"   name="message" />
+            </div>
+            
+            <div class="form-group">
+                    <label for="price">price</label>
+                    <input class="form-control" placeholder="price"
+                    [(ngModel)] = "coupon.price"
+                    type="number" id="price"   name="price" />
+                </div>
+
+            
+                <div class="form-group">
+                        <label for="image">image</label>
+                    <select required
+                        name="image"
+                       class="form-control" 
+                      placeholder="image" 
+                   placeholder="image"
+                        [(ngModel)] = "coupon.image"
+                        id="image">
+                        <option value=""></option>
+                        <option value="{{VACATION}}">VACATION</option>
+                        <option value="{{ELECTRICAPPLIANCE}}">ELECTRICAPPLIANCE</option>
+                        <option value="{{FOOD}}">FOOD</option>
+                        <option value="{{LEISURE}}">LEISURE</option>
+                        <option value=""></option>
+                        
+                    </select>
+                    </div> 
+ <hr>
+<hr>
+    </div>
+    <div class="form-group">   
+     <button (click) = "createCoupon()" class="btn btn-primary">Create Coupon <span class="glyphicon glyphicon-plus-sign"></span></button>
+  </div>
+
+</form>
